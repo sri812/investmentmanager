@@ -4,21 +4,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "customer_account")
+@Table(name = "customer")
 @Getter
 @Setter
-public class CustomerAccount {
+public class Customer {
 
     @Id
-    @GeneratedValue
-    private Long accountId;
     private Long customerId;
-    private String accountName;
-    private Long accountNumber;
-    private Double balance;
+    private String customerName;
+    private String password;
+
 }
